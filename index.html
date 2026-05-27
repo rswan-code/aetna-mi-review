@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aetna Michigan | Maternal Support Program | Pyx Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
+
+.nav{background:#2e4456;padding:0 28px;display:flex;align-items:center;gap:0;position:sticky;top:0;z-index:100;flex-wrap:wrap}
+.nav-brand{color:#fff;font-family:'Roboto Slab',serif;font-weight:600;font-size:15px;padding:14px 20px 14px 0;border-right:1px solid rgba(255,255,255,.15);margin-right:12px;white-space:nowrap}
+.nav-brand span{color:#49a601}
+.nav-tabs{display:flex;flex-wrap:wrap;gap:0;flex:1}
+.nav-tab{color:rgba(255,255,255,.65);padding:14px 16px;font-size:12px;font-weight:500;cursor:pointer;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap}
+.nav-tab:hover{color:#fff;background:rgba(255,255,255,.05)}
+.nav-tab.active{color:#49a601;border-bottom-color:#49a601}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.tp-btn{background:rgba(73,166,1,.15);border:1px solid #49a601;color:#49a601;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap}
+.tp-btn.active{background:#49a601;color:#fff}
+
+.page{display:none;padding:28px}
+.page.active{display:block}
+
+.value-anchor{background:linear-gradient(135deg,#2e4456 0%,#1e3045 100%);border-radius:12px;padding:28px 32px;margin-bottom:24px;display:flex;align-items:center;gap:24px}
+.va-text h2{color:#fff;font-family:'Roboto Slab',serif;font-weight:300;font-size:22px;line-height:1.3;margin-bottom:6px}
+.va-text p{color:rgba(255,255,255,.7);font-size:13px;line-height:1.6}
+.va-text strong{color:#87d001}
+
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:18px;margin-top:28px}
+.section-label{background:#49a601;color:#fff;font-size:10px;font-weight:700;padding:4px 10px;border-radius:20px;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
+.section-title{font-family:'Roboto Slab',serif;font-weight:600;font-size:17px;color:#2e4456}
+.section-divider{flex:1;height:1px;background:#d2dce8}
+
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:24px}
+.kpi{background:#fff;border-radius:10px;padding:20px;border-top:3px solid #d2dce8;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.kpi.green{border-top-color:#49a601}
+.kpi.teal{border-top-color:#29a4a2}
+.kpi.blue{border-top-color:#0076bf}
+.kpi.orange{border-top-color:#d6661a}
+.kpi.purple{border-top-color:#5542a7}
+.kpi.slate{border-top-color:#2e4456}
+.kpi.lgreen{border-top-color:#87d001}
+.kpi-lbl{font-size:11px;font-weight:700;color:#6b7f8f;text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px}
+.kpi-val{font-size:28px;font-weight:700;color:#2e4456;line-height:1}
+.kpi-ctx{font-size:11px;color:#8a9aab;margin-top:5px}
+.kpi-vs{font-size:10px;color:#49a601;font-weight:700;margin-top:6px}
+
+.tp-block{display:none;background:#f0f9ec;border:1px solid #87d001;border-radius:8px;padding:16px;margin-top:10px;margin-bottom:16px}
+.tp-block.visible{display:block}
+.tp-block h4{color:#2a6200;font-size:12px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.tp-block h4::before{content:'▶';font-size:9px}
+.tp-block ul{padding-left:16px}
+.tp-block ul li{font-size:12px;color:#2e4456;line-height:1.6;margin-bottom:4px}
+
+.spotlight{background:linear-gradient(135deg,#49a601,#87d001);border-radius:10px;padding:24px;margin-bottom:24px;color:#fff}
+.spotlight.teal{background:linear-gradient(135deg,#29a4a2,#3acebf)}
+.spotlight.slate{background:linear-gradient(135deg,#2e4456,#1e3045)}
+.spotlight.blue{background:linear-gradient(135deg,#0076bf,#0cabec)}
+.spotlight h3{font-family:'Roboto Slab',serif;font-weight:700;font-size:16px;margin-bottom:6px}
+.spotlight .tag{background:rgba(255,255,255,.2);font-size:10px;font-weight:700;padding:3px 8px;border-radius:12px;display:inline-block;margin-bottom:12px;letter-spacing:.5px}
+.spotlight p{font-size:12px;opacity:.9;line-height:1.6}
+
+.data-note{background:#fff8e6;border:1px solid #ff9400;border-radius:8px;padding:12px 16px;font-size:11px;color:#6b4c00;margin-bottom:20px;line-height:1.5}
+.data-note strong{color:#9a4a00}
+
+.activation-display{background:#fff;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-top:3px solid #49a601}
+.activation-number{font-size:52px;font-weight:700;color:#49a601;line-height:1}
+.activation-label{font-size:14px;color:#6b7f8f;margin-top:4px}
+.activation-context{font-size:12px;color:#8a9aab;margin-top:8px;line-height:1.5}
+
+.billing-table{background:#fff;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06);overflow-x:auto}
+.barrier-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eff1f3}
+.barrier-row:last-of-type{border-bottom:none}
+.barrier-name{font-size:13px;font-weight:500;min-width:190px}
+.barrier-bars{flex:1;display:flex;gap:6px;align-items:center}
+.barrier-vals{font-size:11px;color:#6b7f8f;white-space:nowrap;min-width:36px;text-align:right}
+.data-table{width:100%;border-collapse:collapse;font-size:12px}
+.data-table th{background:#2e4456;color:#fff;padding:10px 12px;text-align:left;font-weight:600;font-size:11px}
+.data-table td{padding:9px 12px;border-bottom:1px solid #eff1f3}
+.data-table tr:last-child td{border-bottom:none}
+.change-chip{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;background:#e6f7d5;color:#2a6200}
+
+.roi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-bottom:24px}
+.roi-tile{border-radius:10px;padding:24px;color:#fff;text-align:center}
+.roi-tile.teal{background:#29a4a2}
+.roi-tile.blue{background:#0076bf}
+.roi-tile.slate{background:#2e4456}
+.roi-tile.green{background:#49a601}
+.roi-tile .big{font-size:26px;font-weight:700;line-height:1;margin-bottom:10px}
+.roi-tile .desc{font-size:11px;opacity:.85;line-height:1.5}
+
+.stage-header{display:flex;align-items:center;gap:14px;margin-bottom:20px;margin-top:32px}
+.stage-num{width:36px;height:36px;border-radius:50%;background:#49a601;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.stage-label-wrap{display:flex;flex-direction:column;gap:2px}
+.stage-label-tag{font-size:10px;font-weight:700;color:#49a601;text-transform:uppercase;letter-spacing:.6px}
+.stage-title-text{font-family:'Roboto Slab',serif;font-weight:600;font-size:18px;color:#2e4456}
+.stage-divider{flex:1;height:1px;background:#d2dce8}
+.stage-card{background:#fff;border-radius:10px;padding:24px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid #49a601}
+.stage-narrative{font-size:14px;color:#2e4456;line-height:1.75;margin-bottom:20px;font-style:italic;border-bottom:1px solid #eff1f3;padding-bottom:16px}
+.stage-narrative strong{font-style:normal}
+
+.pop-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.pop-item{display:flex;align-items:center;gap:10px;background:#f6f6f6;border-radius:8px;padding:12px 16px}
+.pop-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.pop-label{font-size:12px;color:#2e4456;flex:1}
+.pop-pct{font-size:14px;font-weight:700;color:#2e4456}
+
+.appt-bar{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eff1f3}
+.appt-bar:last-of-type{border-bottom:none}
+.appt-name{font-size:13px;font-weight:500;min-width:170px}
+.appt-fill-wrap{flex:1;background:#eff1f3;border-radius:4px;height:10px}
+.appt-fill{height:10px;border-radius:4px}
+.appt-val{font-size:13px;font-weight:700;color:#2e4456;min-width:28px;text-align:right}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.footer{margin-top:40px;padding:20px;text-align:center;font-size:11px;color:#aab5c0;border-top:1px solid #d2dce8}
+@media(max-width:700px){.two-col,.pop-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-brand">Pyx <span>Health</span></div>
+  <div class="nav-tabs">
+    <div class="nav-tab active" onclick="showPage('overview',this)">Program Overview</div>
+    <div class="nav-tab" onclick="showPage('screening',this)">Screening &amp; Barriers</div>
+    <div class="nav-tab" onclick="showPage('activation',this)">Activation &amp; Care Access</div>
+    <div class="nav-tab" onclick="showPage('value',this)">Plan Value</div>
+  </div>
+  <div class="nav-right">
+    <button class="tp-btn" id="tp-toggle" onclick="toggleTP()">Talking Points</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     PROGRAM OVERVIEW
+     ============================================================ -->
+<div class="page active" id="page-overview">
+
+  <div class="value-anchor">
+    <svg viewBox="0 0 48 48" fill="none" style="width:48px;height:48px;flex-shrink:0">
+      <circle cx="24" cy="24" r="24" fill="rgba(73,166,1,.2)"/>
+      <path d="M16 24h16M28 18l6 6-6 6" stroke="#87d001" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="va-text">
+      <h2>You asked us to improve access to care for pre/post natal members. In 7 months, Pyx has enrolled <strong>479 Aetna Michigan members</strong> — with 89% engaging directly with the care team (vs. 68% under the prior model) — and translated that engagement into a <strong>56% care visit completion rate among engaged members.</strong></h2>
+      <p>Enrollment reflects priority populations aligned to plan goals: pregnancy cohort, high-cost/high-utilizer, maternal health support, and target diagnosis. Every enrolled member is in active engagement cadence with a dedicated care team member.</p>
+    </div>
+  </div>
+
+  <div class="data-note"><strong>Dashboard data current through 5/27/2026 · Contract start 11/1/2025 (Month 7) · </strong>5-month performance review reflects Nov 2025–March 2026.</div>
+
+  <!-- Stage 1 -->
+  <div class="stage-header">
+    <div class="stage-num">1</div>
+    <div class="stage-label-wrap">
+      <div class="stage-label-tag">Stage 1 — Member Response</div>
+      <div class="stage-title-text">Enrollment &amp; Targeted Outreach</div>
+    </div>
+    <div class="stage-divider"></div>
+  </div>
+  <div class="stage-card">
+    <div class="stage-narrative">
+      Targeted outreach is converting priority populations into program enrollment. 479 members enrolled since contract start, reflecting the mix Aetna Michigan prioritized — nearly half general engagement, 22% target diagnosis cohort, and 8% pregnancy cohort. <strong>41.2% of members convert when a live contact is made. The constraint is outreach volume, not conversion effectiveness.</strong>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi green"><div class="kpi-lbl">Total Enrolled</div><div class="kpi-val">479</div><div class="kpi-ctx">Since contract start 11/1/2025</div></div>
+      <div class="kpi teal"><div class="kpi-lbl">Eligibility File</div><div class="kpi-val">28,054</div><div class="kpi-ctx">Last file received 5/19/2026</div></div>
+      <div class="kpi blue"><div class="kpi-lbl">Members Outreached</div><div class="kpi-val">204</div><div class="kpi-ctx">Unique members contacted to date</div></div>
+      <div class="kpi orange"><div class="kpi-lbl">Conversion — Live Contact</div><div class="kpi-val">41.2%</div><div class="kpi-ctx">2 in 5 enroll when a member is reached</div></div>
+      <div class="kpi purple"><div class="kpi-lbl">Overall Conversion Rate</div><div class="kpi-val">14.6%</div><div class="kpi-ctx">All outreach attempts</div></div>
+      <div class="kpi slate"><div class="kpi-lbl">Enrolled Last 30 Days</div><div class="kpi-val">27</div><div class="kpi-ctx">Ongoing enrollment cadence</div></div>
+    </div>
+
+    <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:14px;color:#2e4456;margin-bottom:12px">Enrollment by Population Cohort</div>
+    <div class="pop-grid">
+      <div class="pop-item"><div class="pop-dot" style="background:#2e4456"></div><div class="pop-label">General Engagement</div><div class="pop-pct">49%</div></div>
+      <div class="pop-item"><div class="pop-dot" style="background:#49a601"></div><div class="pop-label">Target Diagnosis Cohort</div><div class="pop-pct">22%</div></div>
+      <div class="pop-item"><div class="pop-dot" style="background:#87d001"></div><div class="pop-label">High Cost / High Utilizer</div><div class="pop-pct">11%</div></div>
+      <div class="pop-item"><div class="pop-dot" style="background:#0076bf"></div><div class="pop-label">Pregnancy Cohort</div><div class="pop-pct">8%</div></div>
+      <div class="pop-item"><div class="pop-dot" style="background:#ff9400"></div><div class="pop-label">Maternal Health Support</div><div class="pop-pct">6%</div></div>
+      <div class="pop-item"><div class="pop-dot" style="background:#d6661a"></div><div class="pop-label">Emergency Dept. Admit</div><div class="pop-pct">3%</div></div>
+      <div class="pop-item"><div class="pop-dot" style="background:#5542a7"></div><div class="pop-label">Inpatient Admit</div><div class="pop-pct">1%</div></div>
+      <div class="pop-item"><div class="pop-dot" style="background:#aab5c0"></div><div class="pop-label">Other</div><div class="pop-pct">&lt;1%</div></div>
+    </div>
+
+    <div class="tp-block" id="tp-stage1">
+      <h4>Talking Points — Member Response</h4>
+      <ul>
+        <li>479 enrolled across a target population of 28,054 — with 204 unique members outreached, the program has reached less than 1% of the eligible population. The scale opportunity ahead is substantial, and the 41.2% live contact conversion rate means every additional outreach call compounds enrollment</li>
+        <li>41.2% conversion from live contact is the critical metric — when Pyx reaches an Aetna Michigan member, more than 2 in 5 enroll. The barrier is not conversion effectiveness; it is outreach volume reaching the full eligible file</li>
+        <li>The population cohort breakdown confirms the program is reaching Aetna's priority segments — pregnancy cohort (8%), maternal health support (6%), high cost/high utilizer (11%), and target diagnosis cohort (22%) together represent nearly half of all enrollments. These are members where engagement-driven care access has the highest plan value</li>
+        <li>27 enrollments in the last 30 days reflects a steady ongoing cadence — the program is not front-loaded; it continues to convert new members into the engagement model month over month</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Stage 2 -->
+  <div class="stage-header">
+    <div class="stage-num">2</div>
+    <div class="stage-label-wrap">
+      <div class="stage-label-tag">Stage 2 — Member Engagement</div>
+      <div class="stage-title-text">Deeper Engagement Than the Prior Model</div>
+    </div>
+    <div class="stage-divider"></div>
+  </div>
+  <div class="stage-card">
+    <div class="stage-narrative">
+      More enrolled members are engaging directly with the care team — and that engagement is deeper. Members are interacting more frequently and spending significantly more time with the care team than under the prior model. <strong>+70% increase in overall engagement since moving to the proactive, needs-based model. Engagement is intentional and care-team led.</strong>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi green"><div class="kpi-lbl">Care Team Engagement Rate</div><div class="kpi-val">89%</div><div class="kpi-ctx">Of enrolled members engage with care team</div><div class="kpi-vs">↑ vs. 68% under prior model</div></div>
+      <div class="kpi teal"><div class="kpi-lbl">Avg Calls per Member</div><div class="kpi-val">4.1</div><div class="kpi-ctx">Engagement calls per enrolled member</div><div class="kpi-vs">+5% vs. prior model</div></div>
+      <div class="kpi orange"><div class="kpi-lbl">Avg Minutes per Call</div><div class="kpi-val">22</div><div class="kpi-ctx">Average call duration</div><div class="kpi-vs">+147% vs. prior model</div></div>
+      <div class="kpi blue"><div class="kpi-lbl">Avg App Activities / Member</div><div class="kpi-val">16</div><div class="kpi-ctx">Support activities per member</div></div>
+      <div class="kpi purple"><div class="kpi-lbl">Total Engagement Calls</div><div class="kpi-val">251</div><div class="kpi-ctx">125 distinct members · 1.9 avg calls</div></div>
+      <div class="kpi lgreen"><div class="kpi-lbl">Engagement Growth</div><div class="kpi-val">+70%</div><div class="kpi-ctx">Increase in engagement since new model</div></div>
+    </div>
+    <div class="spotlight teal">
+      <div class="tag">NEW MODEL — PROACTIVE, NEEDS-BASED</div>
+      <h3>22 minutes per call vs. prior model — depth of conversation is what surfaces barriers and drives action</h3>
+      <p>The shift to a proactive, needs-based model changed the nature of engagement. Onboarding now centers on identifying member needs upfront, which informs a care plan and guides ongoing outreach. The result: 89% of enrolled members engage directly with the care team — 21 percentage points above the prior model — and calls run more than twice as long. <strong>That depth is what uncovers barriers that standard outreach misses and builds the trust that moves members to care.</strong></p>
+    </div>
+    <div class="tp-block" id="tp-stage2">
+      <h4>Talking Points — Member Engagement</h4>
+      <ul>
+        <li>89% care team engagement vs. 68% under the prior model — this is not a marginal improvement. It reflects a structural shift: the proactive, needs-based model gets more members into a sustained engagement relationship with the care team</li>
+        <li>22 average minutes per call (+147%) means every call is a substantive conversation. At that depth, care team members are uncovering barriers, reviewing care needs, and building the trust that moves members to action</li>
+        <li>+70% increase in overall engagement since the model change reflects the compounding effect of deeper, more intentional outreach. The activity metrics reflect a qualitatively different program than what ran before</li>
+        <li>16 avg app activities per member alongside 89% care team engagement shows both channels are active — the model is not app-dependent, but members who engage with the app are completing meaningful support activities at scale</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Michigan | Maternal Support Program | Confidential</div>
+</div>
+
+<!-- ============================================================
+     SCREENING & BARRIERS
+     ============================================================ -->
+<div class="page" id="page-screening">
+
+  <div class="value-anchor">
+    <svg viewBox="0 0 48 48" fill="none" style="width:48px;height:48px;flex-shrink:0">
+      <circle cx="24" cy="24" r="24" fill="rgba(73,166,1,.2)"/>
+      <path d="M16 24h16M28 18l6 6-6 6" stroke="#87d001" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="va-text">
+      <h2>Deeper engagement is surfacing barriers traditional outreach misses — a <strong>+5.2 average point increase in barrier identification</strong> versus the previous model. 84% of screened members have at least one identified social need, averaging 4.7 distinct needs per member.</h2>
+      <p>These are live, member-reported barriers surfaced through sustained care team conversations — the intelligence that claims data cannot produce and provider visits don't have time to capture.</p>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">UCLA-3 &amp; PHQ-4</div>
+    <div class="section-title">Loneliness &amp; Distress Baselines — Enrolled Members</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi teal"><div class="kpi-lbl">Avg UCLA-3 — All Members</div><div class="kpi-val">4.9</div><div class="kpi-ctx">528 screenings · scale 3–9; ≥6 = clinically lonely</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Avg UCLA-3 — Age 75–84</div><div class="kpi-val">6.0</div><div class="kpi-ctx">At the clinical loneliness threshold</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">Avg PHQ-4 — All Members</div><div class="kpi-val">3.9</div><div class="kpi-ctx">470 screenings · mild-moderate distress range</div></div>
+    <div class="kpi purple"><div class="kpi-lbl">Avg PHQ-4 — Age 75–84</div><div class="kpi-val">7.0</div><div class="kpi-ctx">Moderate distress — highest-risk cohort</div></div>
+    <div class="kpi green"><div class="kpi-lbl">Well-Being Assessments</div><div class="kpi-val">352</div><div class="kpi-ctx">Completed to date</div></div>
+    <div class="kpi slate"><div class="kpi-lbl">EPDS Screenings</div><div class="kpi-val">35</div><div class="kpi-ctx">Edinburgh Postnatal Depression Scale · maternal cohort</div></div>
+  </div>
+
+  <div class="spotlight slate">
+    <div class="tag">CRITICAL FINDING — 75–84 COHORT</div>
+    <h3>UCLA-3 of 6.0 + PHQ-4 of 7.0 — compound clinical risk at the loneliness threshold in the oldest cohort</h3>
+    <p>The 75–84 age group reaches the clinical loneliness threshold (UCLA-3 ≥6) and registers moderate distress on the PHQ-4 (score 7.0, in the moderate 6–8 range) — the only cohort where both scores compound at clinical severity simultaneously. <strong>These members are invisible in standard claims data. Pyx is the identification layer for a risk profile that predicts higher utilization, missed appointments, and behavioral health escalation.</strong></p>
+  </div>
+  <div class="tp-block" id="tp-screening1">
+    <h4>Talking Points — Loneliness &amp; Distress Screening</h4>
+    <ul>
+      <li>Overall UCLA-3 of 4.9 indicates a meaningfully lonely population — below the clinical threshold of 6 but approaching it, with older cohorts already there. The 75–84 group is at 6.0, at the threshold</li>
+      <li>PHQ-4 of 3.9 overall sits at the lower boundary of mild distress — but the 75–84 cohort at 7.0 is in moderate distress territory. These are members at elevated risk for behavioral health utilization if not engaged</li>
+      <li>The compound risk in the 75–84 cohort (UCLA-3 6.0 + PHQ-4 7.0) represents a clinical profile no claims file surfaces. Pyx identifies these members through sustained engagement and routes them to elevated care team attention — and to behavioral health care access</li>
+      <li>528 UCLA-3 and 470 PHQ-4 screenings represent a clinical baseline dataset for the enrolled population — the foundation for tracking loneliness and distress trajectory over the full program tenure</li>
+    </ul>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">SDoH &amp; Barriers</div>
+    <div class="section-title">What's Keeping Members from Care</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi teal"><div class="kpi-lbl">SDoH Positive Rate</div><div class="kpi-val">84%</div><div class="kpi-ctx">392 PRAPARE screenings completed</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Avg Needs per Member</div><div class="kpi-val">4.7</div><div class="kpi-ctx">Distinct SDoH domains per member</div></div>
+    <div class="kpi green"><div class="kpi-lbl">Resource Connections</div><div class="kpi-val">1,769</div><div class="kpi-ctx">Documented community resource connections</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">Barrier ID Improvement</div><div class="kpi-val">+5.2 pts</div><div class="kpi-ctx">Avg point increase vs. prior model</div></div>
+  </div>
+
+  <div class="billing-table">
+    <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:14px;color:#2e4456;margin-bottom:14px">PRAPARE Barrier Domains — Aetna Michigan Members</div>
+    <div class="barrier-row"><div class="barrier-name">Social &amp; Community</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:100%"></div></div></div><div class="barrier-vals">80%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Economic Stability</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:84%"></div></div></div><div class="barrier-vals">67%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Housing</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:50%"></div></div></div><div class="barrier-vals">40%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Healthy Days</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:34%"></div></div></div><div class="barrier-vals">27%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Health Literacy</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:30%"></div></div></div><div class="barrier-vals">24%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Care Gap</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:30%"></div></div></div><div class="barrier-vals">24%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Food</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:25%"></div></div></div><div class="barrier-vals">20%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Income</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:25%"></div></div></div><div class="barrier-vals">20%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Medication Adherence</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:25%"></div></div></div><div class="barrier-vals">20%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Access to Care</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:23%"></div></div></div><div class="barrier-vals">18%</div></div>
+    <div class="barrier-row"><div class="barrier-name">Safety</div><div class="barrier-bars"><div style="flex:1;background:#eff1f3;border-radius:4px;height:8px"><div style="background:#49a601;height:8px;border-radius:4px;width:18%"></div></div></div><div class="barrier-vals">14%</div></div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Model Comparison</div>
+    <div class="section-title">Barrier Identification — Old Contract vs. New Model</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="billing-table">
+    <table class="data-table">
+      <thead>
+        <tr><th>Barrier Category</th><th>Old Contract</th><th>New Model</th><th>Change</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Transportation</td><td>31%</td><td>40%</td><td><span class="change-chip">+9 pts</span></td></tr>
+        <tr><td>Health Literacy</td><td>18%</td><td>25%</td><td><span class="change-chip">+8 pts</span></td></tr>
+        <tr><td>Current Housing</td><td>16%</td><td>20%</td><td><span class="change-chip">+4 pts</span></td></tr>
+        <tr><td>Healthcare Access</td><td>22%</td><td>25%</td><td><span class="change-chip">+3 pts</span></td></tr>
+        <tr><td>Access to Care (financial)</td><td>18%</td><td>19%</td><td><span class="change-chip">+1 pt</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tp-block" id="tp-barriers">
+    <h4>Talking Points — Barriers &amp; New Model</h4>
+    <ul>
+      <li>+5.2 average point increase in barrier identification versus the prior model — the new proactive, needs-based approach is uncovering significantly more of the actual barriers members face. The prior model missed them because the engagement wasn't deep enough to surface them</li>
+      <li>Transportation is the fastest-rising identified barrier at +9 points (31%→40%) — in Michigan, where rural access gaps are significant, transportation is the barrier most likely to drive missed prenatal, postpartum, and follow-up appointments</li>
+      <li>Health Literacy increased +8 points (18%→25%) — members who can't navigate the healthcare system don't schedule appointments they need. The new model identifies this earlier and connects members to navigation support before a gap appears in claims</li>
+      <li>Social & Community at 80% and Economic Stability at 67% represent compounded social burden — the average 4.7 distinct needs per member means these are not single-barrier cases. They are members managing multiple simultaneous challenges that compete with care access</li>
+      <li>1,769 documented resource connections is the operational proof of barrier resolution — not just identification. Pyx closes the loop by connecting members to specific resources, generating the documentation Aetna needs for equity and care management reporting</li>
+    </ul>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Michigan | Maternal Support Program | Screening &amp; Barriers | Confidential</div>
+</div>
+
+<!-- ============================================================
+     ACTIVATION & CARE ACCESS
+     ============================================================ -->
+<div class="page" id="page-activation">
+
+  <div class="value-anchor">
+    <svg viewBox="0 0 48 48" fill="none" style="width:48px;height:48px;flex-shrink:0">
+      <circle cx="24" cy="24" r="24" fill="rgba(73,166,1,.2)"/>
+      <path d="M16 24h16M28 18l6 6-6 6" stroke="#87d001" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="va-text">
+      <h2>Sustained engagement and barrier resolution are translating into action. <strong>56% of engaged members completed a preventive care, behavioral health, or follow-up visit.</strong> 86% of engaged maternal members completed a visit.</h2>
+      <p>These completed visits are early indicators of improved plan quality performance and reduced downstream cost risk. Every appointment is a member who did not become an avoidable ED visit, a missed HEDIS measure, or an unresolved behavioral health crisis.</p>
+    </div>
+  </div>
+
+  <div class="two-col" style="margin-bottom:24px">
+    <div class="activation-display" style="margin-bottom:0">
+      <div class="activation-number">56%</div>
+      <div class="activation-label">Of engaged members completed a preventive care, BH, or follow-up visit</div>
+      <div class="activation-context">Reflects early behavior change — members completing key appointments across maternal, primary care, and behavioral health. Sustained engagement drives this: members who stay engaged complete care.</div>
+    </div>
+    <div class="activation-display" style="margin-bottom:0;border-top-color:#29a4a2">
+      <div class="activation-number" style="color:#29a4a2">86%</div>
+      <div class="activation-label">Of engaged maternal members have completed a visit</div>
+      <div class="activation-context">For the members Aetna asked Pyx to reach — pregnancy cohort, maternal health support — the conversion from engagement to completed care is 86%. Nearly 9 in 10 engaged maternal members have taken a documented care action.</div>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Appointment Types</div>
+    <div class="section-title">Completed Care Visits — Breakdown by Type</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="billing-table">
+    <div class="appt-bar"><div class="appt-name">PCP / Annual Exam</div><div class="appt-fill-wrap"><div class="appt-fill" style="width:100%;background:#49a601"></div></div><div class="appt-val">55</div></div>
+    <div class="appt-bar"><div class="appt-name">Therapy / Counseling</div><div class="appt-fill-wrap"><div class="appt-fill" style="width:76%;background:#29a4a2"></div></div><div class="appt-val">42</div></div>
+    <div class="appt-bar"><div class="appt-name">Specialist</div><div class="appt-fill-wrap"><div class="appt-fill" style="width:69%;background:#87d001"></div></div><div class="appt-val">38</div></div>
+    <div class="appt-bar"><div class="appt-name">Women's Health</div><div class="appt-fill-wrap"><div class="appt-fill" style="width:44%;background:#0076bf"></div></div><div class="appt-val">24</div></div>
+    <div class="appt-bar"><div class="appt-name">Dental</div><div class="appt-fill-wrap"><div class="appt-fill" style="width:13%;background:#d6661a"></div></div><div class="appt-val">7</div></div>
+    <div class="appt-bar"><div class="appt-name">Other</div><div class="appt-fill-wrap"><div class="appt-fill" style="width:11%;background:#aab5c0"></div></div><div class="appt-val">6</div></div>
+  </div>
+
+  <div class="spotlight">
+    <div class="tag">BEHAVIORAL HEALTH — 42 THERAPY / COUNSELING VISITS COMPLETED</div>
+    <h3>BH is the second-highest appointment category — reflecting the program identifying distress early and moving members into care</h3>
+    <p>Behavioral health completions outpace specialist visits and women's health. Given the PHQ-4 baseline of 3.9 overall (and 7.0 for the 75–84 cohort), this reflects the program identifying distress through screening and moving members into behavioral health care before crisis. <strong>42% of maternal health costs come from non-medical conditions, largely mental health — every therapy visit is a direct intervention on that cost driver.</strong></p>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Engagement Depth</div>
+    <div class="section-title">Activities &amp; Resource Connections</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi green"><div class="kpi-lbl">Resource Connections</div><div class="kpi-val">1,769</div><div class="kpi-ctx">Documented community resource connections</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Loneliness Interventions</div><div class="kpi-val">936</div><div class="kpi-ctx">Positive psychology activities completed</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">Avg Activities / Member</div><div class="kpi-val">15</div><div class="kpi-ctx">App-based support activities per person</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Highest Individual Depth</div><div class="kpi-val">342</div><div class="kpi-ctx">Max activities by a single member</div></div>
+  </div>
+  <div class="tp-block" id="tp-activation">
+    <h4>Talking Points — Activation &amp; Care Access</h4>
+    <ul>
+      <li>56% care visit completion among engaged members is the activation headline — more than half of members who engage with the care team complete a qualifying care visit. The model is designed so that sustained engagement leads to action, and the data confirms it</li>
+      <li>86% of engaged maternal members completed a visit — for the specific population Aetna Michigan asked Pyx to reach, nearly 9 in 10 engaged members have taken a documented care action. This is the program working as designed</li>
+      <li>42 therapy/counseling completions as the second-highest appointment category reflects the program's ability to surface and resolve behavioral health need. These are the visits most likely to prevent downstream crisis utilization — ED visits, inpatient admits, and higher-acuity BH intervention</li>
+      <li>PCP/Annual Exam leads at 55 completions — these are the foundational quality measures that drive Aetna's HEDIS performance. Every annual exam completed is a quality measure candidate and a documented clinical baseline for chronic disease management</li>
+      <li>1,769 resource connections alongside 936 loneliness interventions demonstrates that the program is addressing the whole member — removing the barriers that cause members to miss appointments, not just scheduling them</li>
+    </ul>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Michigan | Maternal Support Program | Activation &amp; Care Access | Confidential</div>
+</div>
+
+<!-- ============================================================
+     PLAN VALUE
+     ============================================================ -->
+<div class="page" id="page-value">
+
+  <div class="value-anchor">
+    <svg viewBox="0 0 48 48" fill="none" style="width:48px;height:48px;flex-shrink:0">
+      <circle cx="24" cy="24" r="24" fill="rgba(73,166,1,.2)"/>
+      <path d="M16 24h16M28 18l6 6-6 6" stroke="#87d001" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="va-text">
+      <h2>Completed care visits are <strong>early indicators of improved plan quality performance and reduced downstream cost risk.</strong> The member actions Pyx is driving — prenatal care, annual exams, behavioral health visits — are the ones that move cost and quality most.</h2>
+      <p>Access to prenatal and postpartum care is one of the strongest drivers of maternal cost and quality outcomes. Pyx is the mechanism that converts eligibility into attended care for Aetna Michigan's highest-need members.</p>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Financial &amp; Clinical Impact</div>
+    <div class="section-title">What Activated Care Access Means for the Plan</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="roi-grid">
+    <div class="roi-tile slate">
+      <div class="big">2×</div>
+      <div class="desc">Risk of preterm delivery for members with insufficient prenatal care access — the outcome Pyx's engagement model directly mitigates</div>
+    </div>
+    <div class="roi-tile blue">
+      <div class="big">42%</div>
+      <div class="desc">Of maternal health costs come from non-medical conditions — largely mental health. The 42 BH therapy visits completed are direct cost interventions</div>
+    </div>
+    <div class="roi-tile teal">
+      <div class="big">$2,400</div>
+      <div class="desc">Per person per year savings from avoided physician visits and emergency department use — driven by proactive engagement and barrier resolution</div>
+    </div>
+    <div class="roi-tile green">
+      <div class="big">$2,400–3,200</div>
+      <div class="desc">Lower delivery costs per pregnancy when members access prenatal care — every Women's Health and prenatal visit moves this number</div>
+    </div>
+  </div>
+
+  <div class="spotlight teal">
+    <div class="tag">MICHIGAN CONTEXT</div>
+    <h3>Aetna Michigan's access improvement is happening where the state needs it most</h3>
+    <p>Michigan faces significant maternal health access challenges — rural coverage gaps, transportation barriers (the fastest-rising identified barrier in this program at 40%), and health literacy gaps that prevent members from navigating a complex care system. Aetna Michigan's increase in access to prenatal and postpartum care shows movement where access is most limited. <strong>The 86% maternal member visit completion rate is not just an engagement metric — it is clinical access being created in a state that needs it.</strong></p>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Quality Leading Indicators</div>
+    <div class="section-title">How Completed Visits Connect to Plan Performance</div>
+    <div class="section-divider"></div>
+  </div>
+  <div class="kpi-grid">
+    <div class="kpi green"><div class="kpi-lbl">PCP / Annual Exams</div><div class="kpi-val">55</div><div class="kpi-ctx">Preventive care → HEDIS preventive measures</div></div>
+    <div class="kpi teal"><div class="kpi-lbl">Therapy / Counseling</div><div class="kpi-val">42</div><div class="kpi-ctx">BH visits → reduced crisis utilization</div></div>
+    <div class="kpi blue"><div class="kpi-lbl">Women's Health</div><div class="kpi-val">24</div><div class="kpi-ctx">Prenatal/postpartum → maternal quality measures</div></div>
+    <div class="kpi orange"><div class="kpi-lbl">Specialist Visits</div><div class="kpi-val">38</div><div class="kpi-ctx">Chronic disease management → quality &amp; cost risk</div></div>
+  </div>
+  <div class="tp-block" id="tp-value">
+    <h4>Talking Points — Plan Value</h4>
+    <ul>
+      <li>The 2× preterm birth risk for members without adequate prenatal access is the foundational cost case — preterm delivery costs are significantly higher than term, and every prenatal visit Pyx drives is a direct risk-reduction action for the plan</li>
+      <li>42% of maternal health costs are non-medical, largely mental health — the 42 therapy completions are direct interventions on that cost category. BH care accessed early prevents the downstream crisis utilization that drives the highest costs</li>
+      <li>$2,400 per person per year in avoided physician and ED use is the operational savings case — members who have a care team advocate navigating their barriers are less likely to use the ED as a default access point</li>
+      <li>$2,400–3,200 lower delivery cost per pregnancy when prenatal care is accessed — the 24 Women's Health visits completed connect directly to this number. Each visit is not just a quality metric; it is a cost avoidance event for the plan</li>
+      <li>55 PCP/annual exams are the quality infrastructure visits — members who complete an annual exam are in the quality numerator for preventive care measures and have a clinical baseline from which chronic conditions can be managed proactively rather than reactively</li>
+    </ul>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Michigan | Maternal Support Program | Plan Value | Confidential</div>
+</div>
+
+<script>
+function showPage(id,el){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
+  document.querySelectorAll('.nav-tab').forEach(function(t){t.classList.remove('active')});
+  document.getElementById('page-'+id).classList.add('active');
+  el.classList.add('active');
+}
+function toggleTP(){
+  var btn=document.getElementById('tp-toggle');
+  var on=btn.classList.toggle('active');
+  document.querySelectorAll('.tp-block').forEach(function(b){b.classList.toggle('visible',on)});
+}
+</script>
+</body>
+</html>
