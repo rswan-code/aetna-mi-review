@@ -155,6 +155,7 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
     <div class="nav-tab" onclick="showPage('screening',this)">Screening &amp; Barriers</div>
     <div class="nav-tab" onclick="showPage('activation',this)">Activation &amp; Care Access</div>
     <div class="nav-tab" onclick="showPage('value',this)">Plan Value</div>
+    <div class="nav-tab" onclick="showPage('future',this)">Program Future</div>
   </div>
   <div class="nav-right">
     <button class="tp-btn" id="tp-toggle" onclick="toggleTP()">Talking Points</button>
@@ -559,6 +560,82 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
   </div>
 
   <div class="footer">Pyx Health | Aetna Michigan | Maternal Support Program | Plan Value | Confidential</div>
+</div>
+
+<!-- ============================================================
+     PROGRAM FUTURE
+     ============================================================ -->
+<div class="page" id="page-future">
+
+  <div class="value-anchor">
+    <svg viewBox="0 0 48 48" fill="none" style="width:48px;height:48px;flex-shrink:0">
+      <circle cx="24" cy="24" r="24" fill="rgba(73,166,1,.2)"/>
+      <path d="M16 24h16M28 18l6 6-6 6" stroke="#87d001" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <div class="va-text">
+      <h2>A significant portion of engaged members are still progressing toward care milestones — representing a <strong>clear opportunity to drive additional prenatal and postpartum visit completion.</strong></h2>
+      <p>The model is working. The decision ahead is how to deploy it: continue at full scope for the broadest reach, or concentrate on the highest-impact members. Both paths maintain the same quality of engagement services.</p>
+    </div>
+  </div>
+
+  <div class="section-header" style="margin-top:0">
+    <div class="section-label">Budget</div>
+    <div class="section-title">Program Spend vs. Allocated Budget</div>
+    <div class="section-divider"></div>
+  </div>
+  <div style="background:#fff;border-radius:10px;padding:28px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+      <div style="font-size:13px;font-weight:500;color:#2e4456">Program spend vs. allocated budget</div>
+      <div style="font-size:24px;font-weight:700;color:#49a601">62%</div>
+    </div>
+    <div style="background:#eff1f3;border-radius:20px;height:14px;overflow:hidden">
+      <div style="background:linear-gradient(90deg,#49a601,#87d001);width:62%;height:14px;border-radius:20px"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:#aab5c0">
+      <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <div class="section-label">Recommendation</div>
+    <div class="section-title">Path Forward</div>
+    <div class="section-divider"></div>
+  </div>
+
+  <div style="background:#fff;border-radius:10px;padding:28px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid #49a601">
+    <div style="display:flex;align-items:flex-start;gap:16px">
+      <div style="width:32px;height:32px;border-radius:50%;background:#49a601;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">1</div>
+      <div>
+        <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:16px;color:#2e4456;margin-bottom:8px">Continue current pace and scope <span style="color:#49a601;font-size:13px;font-weight:700;margin-left:8px">Recommended</span></div>
+        <div style="font-size:13px;color:#6b7f8f;line-height:1.7;margin-bottom:12px">Allows us to impact the most members with the level of engagement services that are driving outcomes. This option drives the largest return and maintains full reach into the eligible population.</div>
+        <div style="background:#f0f9ec;border:1px solid #87d001;border-radius:8px;padding:14px 18px;display:inline-block">
+          <span style="font-size:12px;color:#6b7f8f">Incremental investment: </span><span style="font-size:18px;font-weight:700;color:#2e4456">$45,000</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#fff;border-radius:10px;padding:28px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-left:4px solid #d2dce8">
+    <div style="display:flex;align-items:flex-start;gap:16px">
+      <div style="width:32px;height:32px;border-radius:50%;background:#aab5c0;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">2</div>
+      <div>
+        <div style="font-family:'Roboto Slab',serif;font-weight:600;font-size:16px;color:#2e4456;margin-bottom:8px">Refine scope but maintain services</div>
+        <div style="font-size:13px;color:#6b7f8f;line-height:1.7">Refine the target population by focusing on the highest-impact members while maintaining the same level of engagement support. Concentrates resources where we're seeing the strongest engagement and highest likelihood of impact.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tp-block" id="tp-future">
+    <h4>Talking Points — Program Future</h4>
+    <ul>
+      <li>62% of the allocated budget has been utilized through month 7 — the program is operating efficiently within budget while driving the engagement depth and visit completion rates outlined in the prior tabs</li>
+      <li>The recommended path (Option 1) is the one that maintains the reach advantage — 28,054 eligible members, 41.2% live contact conversion rate, and a proven engagement model. Narrowing scope trades reach for concentration; continuing current pace trades concentration for scale</li>
+      <li>The $45,000 incremental investment to continue current pace should be weighed against the visit completion rates already demonstrated — 172 completed visits, 86% maternal member activation, and the downstream cost avoidance those visits represent</li>
+      <li>Option 2 is appropriate if Aetna Michigan wants to focus resources on the highest-acuity members (e.g., pregnancy cohort, high-cost/high-utilizer) rather than the full eligible population — it preserves service quality while narrowing the funnel</li>
+    </ul>
+  </div>
+
+  <div class="footer">Pyx Health | Aetna Michigan | Maternal Support Program | Program Future | Confidential</div>
 </div>
 
 <script>
