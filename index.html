@@ -115,8 +115,35 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
 .appt-val{font-size:13px;font-weight:700;color:#2e4456;min-width:28px;text-align:right}
 
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+.yad-wrap{border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);margin-bottom:24px}
+.yad-question{background:#2e4456;padding:20px 28px;color:#fff;font-family:'Roboto Slab',serif;font-weight:300;font-size:18px;line-height:1.4}
+.yad-question strong{color:#87d001;font-weight:600}
+.yad-grid{display:grid;grid-template-columns:1fr 1fr 1fr}
+.yad-col{background:#fff;padding:24px}
+.yad-col:not(:last-child){border-right:1px solid #eff1f3}
+.yad-head{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:18px}
+.yad-head.built{background:#2e4456;color:#fff}
+.yad-head.surfaced{background:#0076bf;color:#fff}
+.yad-head.produced{background:#49a601;color:#fff}
+.yad-stat{padding:11px 0;border-bottom:1px solid #eff1f3}
+.yad-stat:last-of-type{border-bottom:none}
+.yad-num{font-size:22px;font-weight:700;color:#2e4456;line-height:1;margin-bottom:4px}
+.yad-desc{font-size:12px;color:#6b7f8f;line-height:1.4}
+.yad-vs{font-size:10px;font-weight:700;color:#49a601;margin-top:3px}
+
+.scale-card{background:#fff;border-radius:10px;padding:28px;box-shadow:0 1px 4px rgba(0,0,0,.06);border-top:3px solid #49a601;margin-bottom:24px}
+.scale-header{font-family:'Roboto Slab',serif;font-weight:600;font-size:16px;color:#2e4456;margin-bottom:6px}
+.scale-sub{font-size:13px;color:#6b7f8f;margin-bottom:20px;line-height:1.5}
+.scale-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid #eff1f3;border-radius:8px;overflow:hidden}
+.scale-stat{padding:18px 20px;text-align:center}
+.scale-stat:not(:last-child){border-right:1px solid #eff1f3}
+.scale-stat-num{font-size:26px;font-weight:700;color:#2e4456;line-height:1;margin-bottom:4px}
+.scale-stat-lbl{font-size:11px;color:#8a9aab}
+.scale-closing{font-size:13px;color:#2e4456;line-height:1.7;margin-top:18px;padding-top:18px;border-top:1px solid #eff1f3}
+
 .footer{margin-top:40px;padding:20px;text-align:center;font-size:11px;color:#aab5c0;border-top:1px solid #d2dce8}
-@media(max-width:700px){.two-col,.pop-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.two-col,.pop-grid,.yad-grid,.scale-stats{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -426,61 +453,109 @@ body{font-family:'Montserrat',sans-serif;background:#f6f6f6;color:#2e4456}
       <path d="M16 24h16M28 18l6 6-6 6" stroke="#87d001" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <div class="va-text">
-      <h2>Completed care visits are <strong>early indicators of improved plan quality performance and reduced downstream cost risk.</strong> The member actions Pyx is driving — prenatal care, annual exams, behavioral health visits — are the ones that move cost and quality most.</h2>
-      <p>Access to prenatal and postpartum care is one of the strongest drivers of maternal cost and quality outcomes. Pyx is the mechanism that converts eligibility into attended care for Aetna Michigan's highest-need members.</p>
+      <h2>You asked us to improve access to care for pre/post natal members. <strong>Here is what 7 months produced.</strong></h2>
+      <p>Three things happened in sequence: Pyx built a deeper engagement model, that depth surfaced barriers the prior model missed, and resolving those barriers moved members into care. Each column below is one step in that chain.</p>
     </div>
   </div>
 
-  <div class="section-header" style="margin-top:0">
-    <div class="section-label">Financial &amp; Clinical Impact</div>
-    <div class="section-title">What Activated Care Access Means for the Plan</div>
-    <div class="section-divider"></div>
-  </div>
-  <div class="roi-grid">
-    <div class="roi-tile slate">
-      <div class="big">2×</div>
-      <div class="desc">Risk of preterm delivery for members with insufficient prenatal care access — the outcome Pyx's engagement model directly mitigates</div>
-    </div>
-    <div class="roi-tile blue">
-      <div class="big">42%</div>
-      <div class="desc">Of maternal health costs come from non-medical conditions — largely mental health. The 42 BH therapy visits completed are direct cost interventions</div>
-    </div>
-    <div class="roi-tile teal">
-      <div class="big">$2,400</div>
-      <div class="desc">Per person per year savings from avoided physician visits and emergency department use — driven by proactive engagement and barrier resolution</div>
-    </div>
-    <div class="roi-tile green">
-      <div class="big">$2,400–3,200</div>
-      <div class="desc">Lower delivery costs per pregnancy when members access prenatal care — every Women's Health and prenatal visit moves this number</div>
+  <div class="yad-wrap">
+    <div class="yad-question">You asked: <strong>improve access to care for pre/post natal members.</strong></div>
+    <div class="yad-grid">
+
+      <div class="yad-col">
+        <div class="yad-head built">What We Built</div>
+        <div class="yad-stat">
+          <div class="yad-num">89%</div>
+          <div class="yad-desc">Of enrolled members engage directly with the care team<div class="yad-vs">↑ vs. 68% under prior model</div></div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">22 min</div>
+          <div class="yad-desc">Average call duration — depth that surfaces barriers<div class="yad-vs">+147% vs. prior model</div></div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">4.1</div>
+          <div class="yad-desc">Calls per member — sustained cadence, not one-and-done<div class="yad-vs">+5% vs. prior model</div></div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">+70%</div>
+          <div class="yad-desc">Increase in overall engagement since model change</div>
+        </div>
+      </div>
+
+      <div class="yad-col">
+        <div class="yad-head surfaced">What It Surfaced</div>
+        <div class="yad-stat">
+          <div class="yad-num">+5.2 pts</div>
+          <div class="yad-desc">More barriers identified per member vs. old contract<div class="yad-vs">Transportation +9 pts · Health Literacy +8 pts</div></div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">84%</div>
+          <div class="yad-desc">Of screened members have at least one social need</div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">4.7</div>
+          <div class="yad-desc">Avg distinct needs per member — compound barriers, not single obstacles</div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">1,769</div>
+          <div class="yad-desc">Documented resource connections — barriers identified and resolved</div>
+        </div>
+      </div>
+
+      <div class="yad-col">
+        <div class="yad-head produced">What It Produced</div>
+        <div class="yad-stat">
+          <div class="yad-num">56%</div>
+          <div class="yad-desc">Of engaged members completed a preventive care, BH, or follow-up visit</div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">86%</div>
+          <div class="yad-desc">Of engaged maternal members completed a visit — the population you asked us to reach</div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">172</div>
+          <div class="yad-desc">Total completed visits: 55 PCP · 42 BH · 38 Specialist · 24 Women's Health · 7 Dental</div>
+        </div>
+        <div class="yad-stat">
+          <div class="yad-num">936</div>
+          <div class="yad-desc">Loneliness interventions completed — addressing the social drivers beneath missed care</div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="spotlight teal">
-    <div class="tag">MICHIGAN CONTEXT</div>
-    <h3>Aetna Michigan's access improvement is happening where the state needs it most</h3>
-    <p>Michigan faces significant maternal health access challenges — rural coverage gaps, transportation barriers (the fastest-rising identified barrier in this program at 40%), and health literacy gaps that prevent members from navigating a complex care system. Aetna Michigan's increase in access to prenatal and postpartum care shows movement where access is most limited. <strong>The 86% maternal member visit completion rate is not just an engagement metric — it is clinical access being created in a state that needs it.</strong></p>
-  </div>
-
-  <div class="section-header">
-    <div class="section-label">Quality Leading Indicators</div>
-    <div class="section-title">How Completed Visits Connect to Plan Performance</div>
-    <div class="section-divider"></div>
-  </div>
-  <div class="kpi-grid">
-    <div class="kpi green"><div class="kpi-lbl">PCP / Annual Exams</div><div class="kpi-val">55</div><div class="kpi-ctx">Preventive care → HEDIS preventive measures</div></div>
-    <div class="kpi teal"><div class="kpi-lbl">Therapy / Counseling</div><div class="kpi-val">42</div><div class="kpi-ctx">BH visits → reduced crisis utilization</div></div>
-    <div class="kpi blue"><div class="kpi-lbl">Women's Health</div><div class="kpi-val">24</div><div class="kpi-ctx">Prenatal/postpartum → maternal quality measures</div></div>
-    <div class="kpi orange"><div class="kpi-lbl">Specialist Visits</div><div class="kpi-val">38</div><div class="kpi-ctx">Chronic disease management → quality &amp; cost risk</div></div>
-  </div>
   <div class="tp-block" id="tp-value">
     <h4>Talking Points — Plan Value</h4>
     <ul>
-      <li>The 2× preterm birth risk for members without adequate prenatal access is the foundational cost case — preterm delivery costs are significantly higher than term, and every prenatal visit Pyx drives is a direct risk-reduction action for the plan</li>
-      <li>42% of maternal health costs are non-medical, largely mental health — the 42 therapy completions are direct interventions on that cost category. BH care accessed early prevents the downstream crisis utilization that drives the highest costs</li>
-      <li>$2,400 per person per year in avoided physician and ED use is the operational savings case — members who have a care team advocate navigating their barriers are less likely to use the ED as a default access point</li>
-      <li>$2,400–3,200 lower delivery cost per pregnancy when prenatal care is accessed — the 24 Women's Health visits completed connect directly to this number. Each visit is not just a quality metric; it is a cost avoidance event for the plan</li>
-      <li>55 PCP/annual exams are the quality infrastructure visits — members who complete an annual exam are in the quality numerator for preventive care measures and have a clinical baseline from which chronic conditions can be managed proactively rather than reactively</li>
+      <li>The three-column structure is the story of the program in sequence — you can't get to 56% visit completion without first building the engagement depth that surfaces barriers, and you can't surface barriers with 10-minute check-in calls. The +147% increase in call duration is what made the rest possible</li>
+      <li>89% care team engagement vs. 68% is the structural proof that the model changed — not just improved, but changed. The prior model was reactive and app-led; the new model is proactive and care-team-led, with the app as a support layer</li>
+      <li>86% maternal member visit completion is the direct answer to what Aetna Michigan asked for — improve access to care for pre/post natal members. Nearly 9 in 10 engaged maternal members have completed a documented care visit in 7 months</li>
+      <li>172 total completed visits span the full care spectrum — primary care, behavioral health, specialist, women's health. This is not a single-measure program; it is improving access across the categories where Michigan maternal members have the most need</li>
+      <li>1,769 resource connections represent the barrier resolution work that makes visit completion possible — members who can't get transportation, can't afford copays, or don't understand how to navigate the system do not complete appointments. Pyx removes those barriers before they become missed visits</li>
     </ul>
+  </div>
+
+  <div class="scale-card">
+    <div class="scale-header">What the opportunity ahead looks like</div>
+    <div class="scale-sub">Month 7 of a program built to scale. The model is working — the question is how far to take it.</div>
+    <div class="scale-stats">
+      <div class="scale-stat">
+        <div class="scale-stat-num">28,054</div>
+        <div class="scale-stat-lbl">Members on eligibility file</div>
+      </div>
+      <div class="scale-stat">
+        <div class="scale-stat-num">479</div>
+        <div class="scale-stat-lbl">Enrolled to date</div>
+      </div>
+      <div class="scale-stat">
+        <div class="scale-stat-num">41.2%</div>
+        <div class="scale-stat-lbl">Conversion when a member is reached</div>
+      </div>
+    </div>
+    <div class="scale-closing">
+      Every additional member reached converts at 41.2%. The barriers are real, the engagement model is proven, and the population is large. <strong>This is what month 7 looks like — not the ceiling.</strong>
+    </div>
   </div>
 
   <div class="footer">Pyx Health | Aetna Michigan | Maternal Support Program | Plan Value | Confidential</div>
